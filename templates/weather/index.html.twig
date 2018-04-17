@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Weather !{% endblock %}
+
+{% block body %}
+
+    {% if  app.request.get('day') is not empty %}
+        Parametras {{ app.request.get('day') }}
+    {% endif %}
+    <br>
+    <br>
+    <ul>
+        <li>Šiandien: {{ weatherData.date }}</li>
+        <li>Temperatūra dieną: {{ weatherData.dayTemp }}</li>
+        <li>Temperatūra naktį: {{ weatherData.nightTemp }}</li>
+        <li>Dangus: {{ weatherData.sky }}</li>
+        <li>Provaideris: {{ weatherData.provider }}</li>
+    </ul>
+
+{% endblock %}

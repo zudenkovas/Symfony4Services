@@ -1,0 +1,5 @@
+index:
+    path: /weather/{day}
+    controller: App\Controller\WeatherController::index
+    defaults: { day: null }
+
